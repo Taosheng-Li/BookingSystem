@@ -51,13 +51,14 @@ async function onSubmit(event) {
 
     if (!response.ok) {
       const text = await response.text().catch(() => "");
+
       throw new Error(`HTTP ${response.status} ${response.statusText}\n${text}`);
     }
 
     // Creates an alert and a log message
     const resp = await response.json();
     const created_at =resp.data.created_at.replace('T', ' ').replace('Z', '');
-    
+   
     msg = "Name ➡️ "+ resp.data.name + "\n";
     msg += "Created at ➡️ " + created_at + "\n";
     msg += "ID in database ➡️ "+ resp.data.id + "\n";
