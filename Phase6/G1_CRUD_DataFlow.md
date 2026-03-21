@@ -1,4 +1,5 @@
 2️. READ — Resource (Sequence Diagram)
+```mermaid
 sequenceDiagram
     participant User as Browser
     participant Frontend as Frontend
@@ -22,9 +23,10 @@ sequenceDiagram
         Backend-->>Frontend: 404 Not Found
         Frontend-->>User: Show "resource not found"
     end
-
+```
 
 3. UPDATE — Resource (Sequence Diagram)
+```mermaid
 sequenceDiagram
     participant User as Browser
     participant Frontend as form.js
@@ -58,10 +60,11 @@ sequenceDiagram
             Frontend-->>User: Show success message
         end
     end
-
+```
 
 
 4. DELETE — Resource (Sequence Diagram)
+```mermaid
 sequenceDiagram
     participant User as Browser
     participant Frontend as resources.js
@@ -85,4 +88,4 @@ sequenceDiagram
         Backend-->>Frontend: 404 Not Found
         Frontend-->>User: Show error message
     end
-
+```
